@@ -1,0 +1,30 @@
+{
+	"name": "DataScience",
+	"build": { 
+		"context": "..",
+		"dockerfile": "Dockerfile",
+	},
+
+    "customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+		  // Add the IDs of extensions you want installed when the container is created.
+		  "extensions": ["ms-python.python", 
+		  "github.copilot", 
+		  "ms-python.vscode-pylance",
+		  "ms-toolsai.jupyter",
+		  "ms-toolsai.jupyter-keymap",
+		  "ms-toolsai.jupyter-renderers"
+			]
+		},
+        	// Set custom container specific settings.json values on container create
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "terminal.integrated.inheritEnv": false,
+        "jupyter.experiments.optOutFrom": ["NativeNotebookEditor"],
+        "jupyter.alwaysTrustNotebooks": true
+        }
+	}	
+}
