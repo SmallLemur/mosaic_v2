@@ -138,9 +138,7 @@ def place_tiles_into_gaps(polygons, filler_chains, half_tile, A0):
                 polygons += [p]
                 preselected_nearby_polygons += [p]
                 counter += 1
-    # if 'polygons_filler' in plot: 
-    #     plotting.draw_tiles(polygons, None, h=0,w=0, background_brightness=0.2,
-    #                         return_svg=False, chains=filler_chains, axis_off=True)                
+              
     print (f'Added {counter} tiles into gaps:', f'{time.time()-t0:.1f}s')
     return polygons
 
